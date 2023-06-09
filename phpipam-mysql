@@ -1,0 +1,8 @@
+docker run --detach \
+  --hostname phpipam-mysql.linux.corp \
+  --publish 3306:3306 \
+  --env MYSQL_ROOT_PASSWORD=Password \
+  --name phpipam-mysql \
+  --restart always \
+  --volume /var/lib/docker/phpipam-mysql:/var/lib/mysql \
+  mysql:5.6
