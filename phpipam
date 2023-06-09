@@ -1,0 +1,8 @@
+docker run --detach \
+  --hostname phpipam.linux.corp \
+  --publish 80:80 \
+  --env MYSQL_ENV_MYSQL_ROOT_PASSWORD=Password \
+  --name phpipam \
+  --link phpipam-mysql:mysql \
+  --restart always \
+  pierrecdn/phpipam:latest 
